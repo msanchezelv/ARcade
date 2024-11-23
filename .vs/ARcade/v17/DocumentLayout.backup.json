@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Marina\\ARcade\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|c:\\users\\marina\\arcade\\assets\\scripts\\gatomovimientoswipe.cs||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}",
-      "RelativeMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gatomovimientoswipe.cs||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}"
+      "AbsoluteMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|c:\\users\\marina\\arcade\\assets\\scripts\\mostrarinstrucciones.cs||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}",
+      "RelativeMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mostrarinstrucciones.cs||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,14 +35,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GatoMovimientoSwipe.cs",
-              "DocumentMoniker": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\GatoMovimientoSwipe.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GatoMovimientoSwipe.cs",
-              "ToolTip": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\GatoMovimientoSwipe.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GatoMovimientoSwipe.cs",
+              "Title": "MostrarInstrucciones.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\MostrarInstrucciones.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MostrarInstrucciones.cs",
+              "ToolTip": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\MostrarInstrucciones.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MostrarInstrucciones.cs",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T11:24:26.242Z",
+              "WhenOpened": "2024-11-23T12:22:45.466Z",
               "EditorCaption": ""
             }
           ]
