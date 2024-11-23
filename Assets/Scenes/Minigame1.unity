@@ -529,7 +529,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Bot\xF3n al Minijuego 2: VR"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -693,6 +693,7 @@ GameObject:
   - component: {fileID: 1507295362}
   - component: {fileID: 1507295361}
   - component: {fileID: 1507295360}
+  - component: {fileID: 1507295365}
   m_Layer: 0
   m_Name: Gato_lamiendo_pata
   m_TagString: Untagged
@@ -829,6 +830,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 380409983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507295365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507295359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47b6d9da0c2d0e47aecff610ce8503d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadMovimiento: 5
 --- !u!1 &1693282750
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,7 +942,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1776443151
 Transform:
@@ -1013,7 +1027,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!81 &1912221257
 AudioListener:
