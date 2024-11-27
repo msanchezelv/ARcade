@@ -8,6 +8,10 @@ public class MovimientoGato : MonoBehaviour
 
     public Animator animator;
 
+    private void Start()
+    {
+         Debug.Log("¡El script de MovimientoGato ha iniciado correctamente!");
+    }
     void Update()
     {
         float movimientoHorizontal = Input.GetAxis("Horizontal");
