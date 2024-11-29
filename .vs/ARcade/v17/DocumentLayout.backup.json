@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Marina\\ARcade\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|c:\\users\\marina\\arcade\\assets\\scripts\\fallingobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fallingobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|c:\\users\\marina\\arcade\\assets\\scripts\\livesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\livesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|c:\\users\\marina\\arcade\\assets\\scripts\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|c:\\users\\marina\\arcade\\assets\\scripts\\timemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\timemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|c:\\users\\marina\\arcade\\assets\\scripts\\minijuegomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\minijuegomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|c:\\users\\marina\\arcade\\assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|c:\\users\\marina\\arcade\\assets\\scripts\\intermediatescreenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\intermediatescreenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|c:\\users\\marina\\arcade\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A395B396-8247-62EA-A33C-05168A40A254}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,22 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FallingObject.cs",
-              "DocumentMoniker": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\FallingObject.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FallingObject.cs",
-              "ToolTip": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\FallingObject.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FallingObject.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAQwDMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T10:06:44.923Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -65,27 +63,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "TimeManager.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\TimeManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TimeManager.cs",
+              "ToolTip": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\TimeManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TimeManager.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwC0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T15:00:13.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "LivesManager.cs",
               "DocumentMoniker": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\LivesManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LivesManager.cs",
               "ToolTip": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\LivesManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\LivesManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T10:08:27.978Z",
+              "WhenOpened": "2024-11-29T14:59:51.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerManager.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\PlayerManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerManager.cs",
+              "ToolTip": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\PlayerManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerManager.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAYwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T13:17:35.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IntermediateScreenManager.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\IntermediateScreenManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\IntermediateScreenManager.cs",
+              "ToolTip": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\IntermediateScreenManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\IntermediateScreenManager.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAA1wDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T13:15:23.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ObjectSpawner.cs",
-              "DocumentMoniker": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\ObjectSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectSpawner.cs",
-              "ToolTip": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\ObjectSpawner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ObjectSpawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "MinijuegoManager.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\MinijuegoManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MinijuegoManager.cs",
+              "ToolTip": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\MinijuegoManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MinijuegoManager.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T09:53:40.093Z",
+              "WhenOpened": "2024-11-29T13:15:07.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Marina\\ARcade\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T13:14:56.127Z",
               "EditorCaption": ""
             }
           ]

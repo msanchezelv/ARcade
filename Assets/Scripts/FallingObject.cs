@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class FallingObject : MonoBehaviour
 {
-    public float speed = 10f;
-    private LivesManager livesManager;
+    public float speed = 7f;
+    public LivesManager livesManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("¡El script de FallingObject ha iniciado correctamente!");
         livesManager = FindObjectOfType<LivesManager>();
     }
 
@@ -29,23 +28,30 @@ public class FallingObject : MonoBehaviour
     // Detectar colisiones con el gato
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Colisión detectada con: " + other.gameObject.name);
-
-        if (other.CompareTag("Player")) // Si el objeto que colisiona es el gato
+        if (!GameManager.gameStarted)
         {
+            return;
+        }
+
+        if (other.CompareTag("Player"))
+        {
+            GetComponent<SpriteRenderer>().color = Color.red;            
             
-            Debug.Log("Colisión con el Gato detectada! Restando una vida...");
-            
-            // Restar una vida
             if (livesManager != null)
             {
                 livesManager.DecreaseLife();
-
-                // Destruir el objeto al colisionar
-                Destroy(gameObject);
             }
 
-            
+
+            ObjectSpawner objectSpawner = FindObjectOfType<ObjectSpawner>();
+
+            if (objectSpawner != null)
+            {
+                objectSpawner.SpawnObject();
+            }
+
+            Destroy(gameObject);
+
         }
     }
 }

@@ -63,7 +63,11 @@
     <Compile Include="Assets\Scripts\GatoMovimientoSwipe.cs" />
     <Compile Include="Assets\Scripts\FingerMovement.cs" />
     <Compile Include="Assets\Scripts\LivesManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\IntermediateScreenManager.cs" />
+    <Compile Include="Assets\Scripts\MinijuegoManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\TimeManager.cs" />
     <Compile Include="Assets\Scripts\FallingObject.cs" />
     <Compile Include="Assets\Scripts\MovimientoGato.cs" />
     <Compile Include="Assets\Scripts\MostrarInstrucciones.cs" />

@@ -10,7 +10,7 @@ public class MovimientoGato : MonoBehaviour
 
     private void Start()
     {
-         Debug.Log("¡El script de MovimientoGato ha iniciado correctamente!");
+         
     }
     void Update()
     {

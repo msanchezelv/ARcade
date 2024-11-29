@@ -8,8 +8,6 @@ public class ObjectSpawner : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Se ha iniciado el scrip ObjectSpawner");
-
         // Obtener el límite de la pantalla en el eje X usando la cámara
         Vector3 screenBottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0));
         Vector3 screenBottomRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0));
@@ -21,11 +19,11 @@ public class ObjectSpawner : MonoBehaviour
         InvokeRepeating("SpawnObject", 0f, spawnInterval);
     }
 
-    void SpawnObject()
+    public void SpawnObject()
     {
         // Seleccionar un prefab aleatorio de la lista
         int randomIndex = Random.Range(0, fallingObjectPrefabs.Length);
-        GameObject randomPrefab = fallingObjectPrefabs[randomIndex];
+        GameObject randomPrefab = fallingObjectPrefabs[randomIndex];             
 
         // Generar en una posición aleatoria dentro del rango visible
         Vector3 spawnPosition = new Vector3(
@@ -34,7 +32,8 @@ public class ObjectSpawner : MonoBehaviour
             0f
         );
 
-        // Instanciar el objeto seleccionado
         Instantiate(randomPrefab, spawnPosition, Quaternion.identity);
+
     }
+       
 }

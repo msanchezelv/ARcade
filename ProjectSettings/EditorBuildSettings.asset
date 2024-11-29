@@ -23,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigame5.unity
     guid: b4dd7ef9b1036854d991b96beefd4367
+  - enabled: 1
+    path: Assets/Scenes/WaitingScene.unity
+    guid: 7245ce46a9cb2214e822b921e35f73f4
+  - enabled: 1
+    path: Assets/Scenes/Opciones.unity
+    guid: 71ca012afeefc604e82a6abbb41fe3dc
+  - enabled: 1
+    path: Assets/Scenes/Jugador.unity
+    guid: 9c626a559afbbc24eba37f2685fb537c
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: b2428b0ee77d4e54fb57777e390653e0
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5bb0a8fa7d5a7dd47a97955a1e077db3, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 90399f9fc3e9395499be326692182c33, type: 2}

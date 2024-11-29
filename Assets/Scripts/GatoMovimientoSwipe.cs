@@ -22,7 +22,6 @@ public class GatoMovimientoSwipe : MonoBehaviour
 
     void FixedUpdate()
     {
-        MoverGato();
         RestringirMovimiento();
     }
 
@@ -64,11 +63,6 @@ public class GatoMovimientoSwipe : MonoBehaviour
         {
             rb.velocity = Vector2.zero; // Detener el movimiento cuando no hay toque
         }
-    }
-
-    private void MoverGato()
-    {
-        // Movimiento ya se maneja con rb.velocity, no es necesario moverlo manualmente
     }
 
     private void ActualizarAnimacion()
