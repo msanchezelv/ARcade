@@ -47,7 +47,7 @@ public class IntermediateScreenManager : MonoBehaviour
     {
         if (playerText != null)
         {
-            Debug.Log($"[UpdatePlayerText] Actualizando texto: Jugador {currentPlayer}");
+            Debug.Log($"[IntermediateScreenManager_UpdatePlayerText] Actualizando texto: Jugador {currentPlayer}");
             playerText.text = $"Jugador {currentPlayer}";
         }
         else

@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
@@ -13,36 +14,47 @@ public class TimeManager : MonoBehaviour
     {
         timeRemaining = gameTime;  // Iniciar el temporizador con el valor máximo
         UpdateTimeText();          // Actualiza el texto del tiempo al inicio
+        playerManager = PlayerManager.Instance;
     }
 
     void Update()
     {
-        // Si el jugador toca la pantalla y el juego aún no ha comenzado
         if (!gameStarted && (Input.touchCount > 0 || Input.GetMouseButtonDown(0)))
         {
-            gameStarted = true;  // Iniciar el juego
+            gameStarted = true;
         }
 
-        // Solo reducir el tiempo si el juego ha comenzado
         if (gameStarted)
         {
-            timeRemaining -= Time.deltaTime;  // Reducir el tiempo en función del frame
-            UpdateTimeText();                 // Actualizar el texto del tiempo en pantalla
+            timeRemaining -= Time.deltaTime;
+            UpdateTimeText();
 
-            if (timeRemaining <= 0f || FindObjectOfType<LivesManager>().lives <= 0)
+            if (timeRemaining <= 0f) //|| FindObjectOfType<LivesManager>().lives <= 0)
             {
-                EndGame();  // Si el tiempo se acaba o las vidas llegan a 0, el juego termina
+                EndGame();
             }
         }
     }
 
+    void EndGame()
+    {        
+        if (playerManager != null)
+        {
+            Debug.Log("Fin del juego, cambiando turno...");
+            playerManager.NextTurn(); // Cambiar turno si playerManager está asignado
+            SceneManager.LoadScene("Jugador");
+        }
+        else
+        {
+            Debug.LogError("playerManager es nulo. No se puede cambiar de turno.");
+        }
+    }
+
+
+
+
     void UpdateTimeText()
     {
         timeText.text = Mathf.Ceil(timeRemaining).ToString(); // Mostrar el tiempo restante en el texto
-    }
-
-    void EndGame()
-    {
-        playerManager.NextTurn();
     }
 }

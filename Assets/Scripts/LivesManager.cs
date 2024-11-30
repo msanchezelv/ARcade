@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LivesManager : MonoBehaviour
@@ -10,11 +11,11 @@ public class LivesManager : MonoBehaviour
     public int lives = 7;              // Número inicial de vidas
     private GameManager gameManager;   // Referencia al GameManager
     private PlayerManager playerManager;
-    private bool gameStarted = false;  // Bandera para controlar el inicio del juego
+    private bool gameStarted = false;  // Ppara controlar el inicio del juego
 
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();  // Obtener referencia al GameManager
+        //gameManager = FindObjectOfType<GameManager>();  // Obtener referencia al GameManager
         UpdateLivesText();  // Actualizar el texto de las vidas al inicio
     }
 
@@ -24,25 +25,24 @@ public class LivesManager : MonoBehaviour
         if (!gameStarted && (Input.touchCount > 0 || Input.GetMouseButtonDown(0)))
         {
             gameStarted = true;
-            Debug.Log("¡El juego ha comenzado!");
+            Debug.Log("LivesManager: ¡El juego ha comenzado!");
         }
     }
 
-    // Método para restar vidas cuando sea necesario
     public void DecreaseLife()
     {
         if (gameStarted && lives > 0)
         {
             lives--;
-            UpdateLivesText();
-            Debug.Log("Vidas restantes: " + lives);
+            UpdateLivesText();            
         }
 
         if (lives <= 0)
         {
-            Debug.Log("Vidas agotadas, cambiando de turno...");
-            playerManager.NextTurn();
+            Debug.Log("Vidas agotadas, cambiando turno...");
+            PlayerManager.Instance.NextTurn();
         }
+
     }
 
 

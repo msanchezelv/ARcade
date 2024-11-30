@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     public int currentPlayer = 1; // Jugador actual
     public int currentMinigame = 1; // Minijuego actual
     public int totalMinigames = 5; // Número total de minijuegos
+    public bool isSecondPlayerTurn = false;
     public GameManager gameManager;
 
     private void Awake()
@@ -26,77 +27,102 @@ public class PlayerManager : MonoBehaviour
     }
 
 
-    //void Start()
-    //{
-    //    Debug.Log("Start llamado en PlayerManager");
+    void Start()
+    {
+        Debug.Log("Start llamado en PlayerManager");
 
-    //    Verifica que gameManager esté asignado antes de usarlo
-    //    if (gameManager == null)
-    //    {
-    //        Debug.LogError("El GameManager no ha sido asignado correctamente en el PlayerManager.");
-    //        gameManager = FindObjectOfType<GameManager>();
-    //    }
+        //Verifica que gameManager esté asignado antes de usarlo
+        if (gameManager == null)
+        {
+            Debug.LogError("El GameManager no ha sido asignado correctamente en el PlayerManager.");
+            //gameManager = FindObjectOfType<GameManager>();
+        }
 
-    //    Verificar si el IntermediateScreenManager está presente
-    //    if (IntermediateScreenManager.Instance != null)
-    //    {
-    //        Debug.Log("Jugador actual al iniciar la escena: " + currentPlayer);
-    //        Invoke("TryUpdatePlayerText", 0.5f);
-    //        IntermediateScreenManager.Instance.UpdatePlayerText();
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("No se encontró el IntermediateScreenManager en la escena.");
-    //    }
+        //Verificar si el IntermediateScreenManager está presente
+        if (IntermediateScreenManager.Instance != null)
+        {
+            Debug.Log("Jugador actual al iniciar la escena: " + currentPlayer);
+            Invoke("TryUpdatePlayerText", 0.5f);
+            IntermediateScreenManager.Instance.UpdatePlayerText(currentPlayer);
+        }
+        //else
+        //{
+        //    Debug.LogError("No se encontró el IntermediateScreenManager en la escena.");
+        //}
 
-    //    if (IntermediateScreenManager.Instance == null)
-    //    {
-    //        GameObject intermediateScreen = new GameObject("IntermediateScreenManager");
-    //        intermediateScreen.AddComponent<IntermediateScreenManager>();
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("PLayerManager: Jugador actual al iniciar la escena: " + currentPlayer);
-    //        Invoke("TryUpdatePlayerText", 0.5f);
-    //        IntermediateScreenManager.Instance.UpdatePlayerText();
+        //    if (IntermediateScreenManager.Instance == null)
+        //    {
+        //        GameObject intermediateScreen = new GameObject("IntermediateScreenManager");
+        //        intermediateScreen.AddComponent<IntermediateScreenManager>();
+        //    }
+        //    else
+        //    {
+        //        Debug.Log("PLayerManager: Jugador actual al iniciar la escena: " + currentPlayer);
+        //        Invoke("TryUpdatePlayerText", 0.5f);
+        //        IntermediateScreenManager.Instance.UpdatePlayerText();
 
-    //    }
-    //}
+        //    }
+        //}
 
-    // Método que se llama al presionar el botón para comenzar el minijuego
-    //public void StartMinigame()
-    //{
-    //    GameManager gameManager = FindObjectOfType<GameManager>();
+        // Método que se llama al presionar el botón para comenzar el minijuego
+        //public void StartMinigame()
+        //{
+        //    GameManager gameManager = FindObjectOfType<GameManager>();
 
-    //    if (gameManager != null)
-    //    {
-    //        string sceneName = "Minigame" + currentMinigame;
-    //        SceneManager.LoadScene(sceneName);
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("GameManager no está disponible para cargar el minijuego.");
-    //    }
-    //}
+        //    if (gameManager != null)
+        //    {
+        //        string sceneName = "Minigame" + currentMinigame;
+        //        SceneManager.LoadScene(sceneName);
+        //    }
+        //    else
+        //    {
+        //        Debug.LogError("GameManager no está disponible para cargar el minijuego.");
+        //    }
+    }
 
     public void NextTurn()
     {
-        currentPlayer = currentPlayer == 1 ? 2 : 1; // Alternar entre jugador 1 y 2
-        currentMinigame++;
-        Debug.Log($"Turno cambiado: Jugador {currentPlayer}");
-
-
-        if (currentMinigame > totalMinigames)
+        if (!isSecondPlayerTurn)
         {
-            SceneManager.LoadScene("End"); // Fin del juego si se completaron todos los minijuegos
+            // Cambiar al segundo jugador
+            currentPlayer = 2;
+            isSecondPlayerTurn = true;
+            Debug.Log($"Turno cambiado: Jugador {currentPlayer} jugará Minijuego {currentMinigame}");
+            SceneManager.LoadScene("Jugador"); // Mostrar la pantalla del jugador
         }
         else
         {
-            SceneManager.LoadScene("Minigame" + currentMinigame); // Cargar el próximo minijuego
+            // Ambos jugadores han jugado, avanzar al siguiente minijuego
+            currentPlayer = 1; // Volver al primer jugador para el siguiente minijuego
+            currentMinigame++;
+            isSecondPlayerTurn = false;
+
+            if (currentMinigame > totalMinigames)
+            {
+                Debug.Log("Todos los minijuegos completados. Fin del juego.");
+                SceneManager.LoadScene("End"); // Fin del juego
+            }
+            else
+            {
+                Debug.Log($"Avanzando al Minijuego {currentMinigame} para el Jugador {currentPlayer}");
+                SceneManager.LoadScene("Jugador"); // Mostrar la pantalla del jugador
+            }
         }
     }
 
+    public void StartMinigame()
+    {
+        // Método llamado desde el botón en la escena "Jugador"
+        SceneManager.LoadScene("Minigame" + currentMinigame);
+    }
 
+
+
+    public void ScheduleNextTurn()
+    {
+        Debug.Log("Cambio de turno programado en PlayerManager.");
+        Invoke(nameof(NextTurn), 1f); // Programar el cambio de turno después de un retraso
+    }
 
     void TryUpdatePlayerText()
     {
