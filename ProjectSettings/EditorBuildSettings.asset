@@ -24,9 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigame5.unity
     guid: b4dd7ef9b1036854d991b96beefd4367
   - enabled: 1
-    path: Assets/Scenes/WaitingScene.unity
-    guid: 7245ce46a9cb2214e822b921e35f73f4
-  - enabled: 1
     path: Assets/Scenes/Opciones.unity
     guid: 71ca012afeefc604e82a6abbb41fe3dc
   - enabled: 1
@@ -36,5 +33,11 @@ EditorBuildSettings:
     path: Assets/Scenes/End.unity
     guid: b2428b0ee77d4e54fb57777e390653e0
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: fbaeb52f572ed6946af9d681dfbdd41a, type: 2}
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 424577b12ba868a488907af103bcc7a2, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5bb0a8fa7d5a7dd47a97955a1e077db3, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 4d930aacd601fa5408b12009475b721e, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 90399f9fc3e9395499be326692182c33, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: a56254c637c5bea47961a8923b396841, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a1f75f6f977073348840367081911f31, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 558a1a8f239cef14289c647b2c7b3091, type: 2}

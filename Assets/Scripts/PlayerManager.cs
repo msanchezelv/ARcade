@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance { get; private set; }
     public int currentPlayer = 1; // Jugador actual
     public int currentMinigame = 1; // Minijuego actual
-    public int totalMinigames = 5; // Número total de minijuegos
+    public int totalMinigames = 5; // Nï¿½mero total de minijuegos
     public bool isSecondPlayerTurn = false;
     public GameManager gameManager;
 
@@ -21,7 +21,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            Debug.Log($"Se encontró una instancia duplicada de PlayerManager en {gameObject.name}. Se destruirá.");
+            Debug.Log($"Se encontrï¿½ una instancia duplicada de PlayerManager en {gameObject.name}. Se destruirï¿½.");
             Destroy(gameObject);
         }
     }
@@ -31,63 +31,38 @@ public class PlayerManager : MonoBehaviour
     {
         Debug.Log("Start llamado en PlayerManager");
 
-        //Verifica que gameManager esté asignado antes de usarlo
+        //Verifica que gameManager estï¿½ asignado antes de usarlo
         if (gameManager == null)
         {
             Debug.LogError("El GameManager no ha sido asignado correctamente en el PlayerManager.");
             //gameManager = FindObjectOfType<GameManager>();
         }
 
-        //Verificar si el IntermediateScreenManager está presente
+        //Verificar si el IntermediateScreenManager estï¿½ presente
         if (IntermediateScreenManager.Instance != null)
         {
             Debug.Log("Jugador actual al iniciar la escena: " + currentPlayer);
             Invoke("TryUpdatePlayerText", 0.5f);
             IntermediateScreenManager.Instance.UpdatePlayerText(currentPlayer);
         }
-        //else
-        //{
-        //    Debug.LogError("No se encontró el IntermediateScreenManager en la escena.");
-        //}
-
-        //    if (IntermediateScreenManager.Instance == null)
-        //    {
-        //        GameObject intermediateScreen = new GameObject("IntermediateScreenManager");
-        //        intermediateScreen.AddComponent<IntermediateScreenManager>();
-        //    }
-        //    else
-        //    {
-        //        Debug.Log("PLayerManager: Jugador actual al iniciar la escena: " + currentPlayer);
-        //        Invoke("TryUpdatePlayerText", 0.5f);
-        //        IntermediateScreenManager.Instance.UpdatePlayerText();
-
-        //    }
-        //}
-
-        // Método que se llama al presionar el botón para comenzar el minijuego
-        //public void StartMinigame()
-        //{
-        //    GameManager gameManager = FindObjectOfType<GameManager>();
-
-        //    if (gameManager != null)
-        //    {
-        //        string sceneName = "Minigame" + currentMinigame;
-        //        SceneManager.LoadScene(sceneName);
-        //    }
-        //    else
-        //    {
-        //        Debug.LogError("GameManager no está disponible para cargar el minijuego.");
-        //    }
     }
 
     public void NextTurn()
     {
         if (!isSecondPlayerTurn)
         {
+            Debug.Log("Player Manager: Primero se calcularÃ¡ la puntuaciÃ³n final");
+            ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+            
+            if (scoreManager != null)
+            {
+                scoreManager.CalculateAndShowFinalScore(); // Calcular y mostrar la puntuaciÃ³n
+            }
+
             // Cambiar al segundo jugador
             currentPlayer = 2;
             isSecondPlayerTurn = true;
-            Debug.Log($"Turno cambiado: Jugador {currentPlayer} jugará Minijuego {currentMinigame}");
+            Debug.Log($"Turno cambiado: Jugador {currentPlayer} jugarï¿½ Minijuego {currentMinigame}");
             SceneManager.LoadScene("Jugador"); // Mostrar la pantalla del jugador
         }
         else
@@ -112,7 +87,7 @@ public class PlayerManager : MonoBehaviour
 
     public void StartMinigame()
     {
-        // Método llamado desde el botón en la escena "Jugador"
+        // Mï¿½todo llamado desde el botï¿½n en la escena "Jugador"
         SceneManager.LoadScene("Minigame" + currentMinigame);
     }
 
@@ -121,7 +96,7 @@ public class PlayerManager : MonoBehaviour
     public void ScheduleNextTurn()
     {
         Debug.Log("Cambio de turno programado en PlayerManager.");
-        Invoke(nameof(NextTurn), 1f); // Programar el cambio de turno después de un retraso
+        Invoke(nameof(NextTurn), 1f); // Programar el cambio de turno despuï¿½s de un retraso
     }
 
     void TryUpdatePlayerText()
@@ -133,7 +108,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("IntermediateScreenManager no está disponible para actualizar el texto.");
+            Debug.LogWarning("IntermediateScreenManager no estï¿½ disponible para actualizar el texto.");
         }
     }
 
